@@ -28,6 +28,7 @@ export interface ZoomPopoverProps {
 }
 
 export interface ZoomPlugin extends Plugin {
+    renderViewer?(props: RenderViewer): Slot;
     zoomTo: (scale: number | SpecialZoomLevel) => void;
     CurrentScale: (props: CurrentScaleProps) => React.ReactElement;
     ZoomIn: (props: ZoomInProps) => React.ReactElement;
